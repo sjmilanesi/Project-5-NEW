@@ -120,6 +120,11 @@ public class CompetitionManager {
      *
      * @return an array of events that are open
      */
+    
+    public void StartFreeEvents(){
+        
+    } 
+    
     public Event[] getFreeEvents()
     {
         Event[] allEvents = em.getEvents();
