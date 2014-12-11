@@ -8,6 +8,7 @@ import edu.marist.cmpt220l.teams.TeamManager;
 public class EventManager {
     private Event[] events;
     private Team[] t;
+    private Queue newQueue;
 
     /**
      * Construct a new EventManager
@@ -19,7 +20,8 @@ public class EventManager {
                 new CornHoleEvent(),
                 new CanJamEvent(),
                 new LadderBallEvent(),
-                new StickGameEvent()
+                new StickGameEvent(),
+            
         };
     }
     
@@ -33,6 +35,7 @@ public class EventManager {
                 new CanJamEvent(),
                 new LadderBallEvent(),
                 new StickGameEvent()
+                new Queue newQueue = new Queue(team);
         };
     }
 
