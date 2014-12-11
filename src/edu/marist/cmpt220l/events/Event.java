@@ -8,6 +8,7 @@ public abstract class Event {
     private int playTo;
     private boolean isPlayToExact;
     private int playDistance;
+    private Queue = newQueue;
 
     /**
      * Construct a new event, this should be called by whomever subclasses this class
@@ -30,6 +31,18 @@ public abstract class Event {
      * @return extra information for this event
      */
     public abstract String getExtraInfo();
+    
+    public Team[] PeekNextTeams(){
+        return team;
+    }
+    
+    public Team[] GetNextTeams(){
+        return team;
+    }
+    
+    public void ReturnTeams(Team winner, Team loser){
+        enqueue winner;
+    }
 
     /**
      * Retrieve the name of this event
