@@ -2,10 +2,6 @@ package edu.marist.cmpt220l;
 
 import edu.marist.cmpt220l.teams.Team;
 
-/**
- * Created by Steven
- */
-
 
 public class Queue {
     private Team first;
@@ -16,8 +12,7 @@ public class Queue {
         this.last = null;
     }
 
-
-
+    
     public void enqueue(Team team){
         Team newTeam = new Team(team);
         if (last != null) {
@@ -37,6 +32,22 @@ public class Queue {
 
     public boolean isEmpty(){
         return first == null;
+    }
+    
+    
+    public Team[] PeakNextTeams() {
+        Team[] team = {first.value, first.next.value};
+        return (team);
+    }
+    
+    public Team[] GetNextTeams(){
+        Team nextTeam = dequeue();
+        Team nextTeam2 = dequeue();
+        return PeakNextTeams();
+    }
+    
+    public void ReturnTeams(Team winner, Team loser){
+        enqueue(winner);
     }
 
 }
